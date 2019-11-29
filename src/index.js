@@ -23,7 +23,6 @@ window.DatoCmsPlugin.init((plugin) => {
       const value = plugin.getFieldValue(plugin.fieldPath);
       locales.forEach((l) => {
         if (updateEnabled[l]) {
-          console.log(`updating ${l} with value ${value}`);
           plugin.setFieldValue(`${baseFieldPath}.${l}`, value);
         }
       });
